@@ -17,4 +17,4 @@ changelog test
 - `GITHUB_AUTH=${TOKEN} lerna-changelog --nextVersion="v$(semver $(git tag | tail -n 1) -i patch)" | cat - CHANGELOG.md > CHANGELOG_TEMP.md; mv CHANGELOG_TEMP.md CHANGELOG.md`
     - `lerna-changelog` is required first tag.
 - `git add CHANGELOG.md && git commit -m "Update CHANGELOG.md"`
-- `git flow release finish -p -m $(GITHUB_AUTH=${TOKEN} lerna-changelog --nextVersion=v$(semver $(git tag | tail -n 1) -i patch))`
+- `git flow release finish -p`
